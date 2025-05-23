@@ -227,6 +227,9 @@ if num1 >=0:
 else:
   print("negatif sayı girdiniz")    
 
+  
+---------------------
+
 sayi = int(input("Bir sayı girin: "))
  
 if sayi <= 1:
@@ -247,9 +250,13 @@ else:
 
   
 
+--------------------        
+
 for i in range(1,10):
     print(i)
   
+--------------------
+
 
 personel_list = ["beyza","zeynep","nurhayat","irem"]
 
@@ -323,7 +330,7 @@ orders = [
     "sepet": [("peynir",3),("zeytin",2)]
 }, {
     "musteri": "Ece Demir",
-    "sepet": [("süt",10),("ekmek",5),("peynir",1),("zeytin",1)]
+    "sepet": [("süt",10),("asekmek",5),("peynir",1),("zeytin",1)]
 }
 ]
 
@@ -407,6 +414,36 @@ def ortalama(sayi1,sayi2):
 ortalama(1,5)
 ---------------------------
 
-"""
 
-    
+# girilen iki sayı arasindaki asal sayıları ekrana bastır
+
+def aradakiAsal(sayi1,sayi2):
+
+    min1 = min(sayi1,sayi2)
+    max1 = max(sayi1,sayi2)
+    asalSayilar = []
+
+    for k in range(min1,max1):
+        sayi =k
+        if sayi <= 1:
+            asal = False
+        else:
+            i = 2
+            asal = True
+            while i < sayi:
+                if sayi % i == 0:
+                    asal = False
+                    break
+                i += 1
+
+            if asal:
+                 asalSayilar.append(sayi)
+
+    return asalSayilar
+
+sayi1 = int(input("Bir sayı girin: "))
+sayi2 = int(input("Bir sayı girin: "))
+print(aradakiAsal(sayi1,sayi2))
+
+
+"""

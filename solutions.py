@@ -20,6 +20,7 @@ ortalama=(sayi1+sayi2+sayi3)/3
 print(toplam)
 print(çarp)
 print(ortalama)
+-----------------
 
 isim = input(" enter your name: ")
 print(f"hello {isim}")
@@ -84,7 +85,7 @@ elif yas>25 and yas<=40:
 else:
   print("yaşlı")
 
-
+---------------------
 
 vize1 = int(input("vize 1 notu: "))
 vize2 = int(input("vize 2 notu: "))
@@ -116,7 +117,7 @@ print(f"ortalamanız {ortalama} ve harf notunuz {harfNotu}")
 
 cinsiyet = input("lütfen cinsiyeti giriniz").lower()
 
-
+-------------------------
 
 sayi1 = int(input("enter a number:"))
 sayi2 = int(input("enter a number:"))
@@ -168,7 +169,7 @@ if kg_cilek>50:
 
 print(f"toplam tutar {total} tl")
 
-
+-------------------
 
 
 choose = input("tek mi çift mi:")
@@ -189,7 +190,7 @@ while checker:
 
 
 
-
+------------
 
 start = 0
 checker = True
@@ -298,7 +299,9 @@ for x in range(6):
 else:
   print("Finally finished!")
 
-"""
+
+
+-----------------
 
 priceStock = {
     "süt": {"fiyat":20, "stok":50},
@@ -347,3 +350,63 @@ for i in orders:
 
 for k,l in priceStock.items():
     print(f"ürün {k} : stok {l["stok"]}")
+
+-----------------------
+    
+
+
+
+def toplama():
+    sayi1 = int(input("bir sayi giriniz:"))
+    sayi2 = int(input("bir sayi giriniz:"))
+    print(sayi1+sayi2)
+
+toplama()
+
+--------------
+
+
+
+
+
+def calculate_age(birth):
+    print(2025 - birth)
+
+
+birth =int(input("doğum yılınızı giriniz:"))
+calculate_age(birth)
+
+----------------------
+
+
+
+def toplama(sayi1,sayi2):
+    toplam = sayi1 +sayi2
+    print(f"{sayi1} + {sayi2} = {toplam}")
+
+
+x = 5
+y = 6
+
+toplama(x,y)
+----------------
+
+# girilien iki sayının arasindaki sayıların ortalaması : örn (5,10) girildi ortalama = 6+7+8+9/4 = 7.5
+
+def ortalama(sayi1,sayi2):
+    min1 =  min(sayi1,sayi2)
+    max1 = max(sayi1,sayi2)
+    c = 0
+    toplam = 0
+    for i in range(min1+1,max1):
+        toplam +=i
+        c+=1
+    result = toplam/c
+    print(result)
+
+ortalama(1,5)
+---------------------------
+
+"""
+
+    

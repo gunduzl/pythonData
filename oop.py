@@ -114,7 +114,7 @@ urun.urun_listesi.append(urun3.adi)
 print(urun.urun_listesi)
 
 -----------
-"""
+
 
 
 class proje():
@@ -157,6 +157,99 @@ proje.proje_listesi.append(proje3.adi)
 
 print(proje.proje_listesi)
 
+-------------------------------------------------------
+
+
+class calisan():
+
+    personel_listesi = [] #Class Özellikleri
+
+    def __init__(self,isim):
+        
+        self.isim = isim
+        self.yetenekler = []
+        self.personel_ekle()
+    
+    @classmethod
+    def personel_sayisini_goruntule(cls): #Sınıf Metodu
+        print(f"Personel Sayiniz : {len(cls.personel_listesi)}")
+    
+    def personel_ekle(self): #Nesne Metodu
+        self.personel_listesi.append(self.isim)
+        print(f"{self.isim} isimli personel personel listesine eklendi.")
+    
+    @classmethod
+    def personel_listesini_goruntule(cls):
+        print("--- Personel Listesi ---\n")
+        for personel in cls.personel_listesi:
+            print(personel)
+    
+    def yetenek_ekle(self,yetenek):
+        self.yetenekler.append(yetenek)
+    
+    def yetenekleri_listele(self):
+        print(f"{self.isim} isimli personelin yetenekleri : ")
+        for yetenek in self.yetenekler:
+            print(yetenek)
+
+
+calisan1 = calisan('Sukru Yusuf')
+calisan2 = calisan('Sercan')
+calisan3 = calisan('Enes')
+calisan4 = calisan('Ecesu')
+calisan5 = calisan('Emre')
+calisan.personel_listesini_goruntule()
+calisan.personel_sayisini_goruntule()
+calisan1.yetenek_ekle("Python")
+calisan2.yetenek_ekle("C")
+calisan3.yetenek_ekle("Machine Learning")
+calisan1.yetenek_ekle("Deep Learning")
+calisan1.yetenek_ekle("NLP")
+calisan1.yetenekleri_listele()
+            
+
+
+---------------------------------------------------------------------
+
+
+"""
+
+
+class kitap:
+
+    kitap_listesi = []
+
+    def __init__(self,baslik,yazar):
+        self.baslik =baslik
+        self.yazar = yazar
+        self.turler = []
+        self._kitap_ekle()
+
+    @classmethod
+    def kitapSayisiGoruntule(cls):
+        print("--- kitap sayisi--- ")
+        print(f"{len(cls.kitap_listesi)}")
+
+    def _kitap_ekle(self):
+        self.kitap_listesi.append(self.baslik)
+
+    @classmethod
+    def katalogu_goruntule(cls):
+        print("--- Kitap Kataloğu Listesi ---\n")
+        for kitap in cls.kitap_listesi:
+            print(kitap)
+
+    
+    def tur_ekle(self,tur):
+        self.turler.append(tur)
+
+
+    def turleri_listele(self):
+        print(f"{self.baslik} isimli kitabın türleri : ")
+        for tur in self.turler:
+            print(tur)
 
 
 
+
+kitap1 = kitap("suç ve ceza", "dostoyevski")

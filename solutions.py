@@ -447,3 +447,4 @@ print(aradakiAsal(sayi1,sayi2))
 
 
 """
+
